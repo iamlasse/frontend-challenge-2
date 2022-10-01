@@ -96,7 +96,7 @@ body {
 .card {
   background-color: var(--color-white);
   border-radius: var(--base-size);
-  max-width: 22rem;
+  max-width: 20rem;
   margin-inline: auto;
   overflow: hidden;
 }
@@ -118,7 +118,7 @@ body {
   min-width: 100%;
 }
 .card .card-content {
-  padding: calc(var(--base-size) *2 );
+  padding: calc(var(--base-size) * 2);
   display: flex;
   flex-flow: column nowrap;
   gap: calc(var(--base-size) * 1.2);
@@ -160,7 +160,7 @@ dl dd * {
 }
 dl dd:first-of-type {
   font-family: var(--font-family-1);
-  font-size: calc(var(--base-size) * 2);
+  font-size: calc(var(--base-size) * 2.2);
   color: var(--dark-cyan);
 }
 dl dd:last-of-type {
@@ -185,6 +185,7 @@ button {
   color: var(--color-white);
   font-family: var(--font-family-2);
   font-size: var(--base-size);
+  font-weight: 400;
   padding-block: calc(var(--base-size) * 0.9);
   padding-inline: 2rem;
   position: relative;
