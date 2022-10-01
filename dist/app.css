@@ -144,26 +144,28 @@ h4 {
   font-weight: 400;
 }
 
-dl {
+ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-dl dd {
+ul li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-dl dd * {
+ul li * {
   font-style: normal;
 }
-dl dd:first-of-type {
+ul li:first-of-type {
   font-family: var(--font-family-1);
   font-size: calc(var(--base-size) * 2.2);
   color: var(--dark-cyan);
 }
-dl dd:last-of-type {
+ul li:last-of-type {
   font-family: var(--font-family-2);
   font-size: var(--base-size);
   color: var(--dark-gray-blue);

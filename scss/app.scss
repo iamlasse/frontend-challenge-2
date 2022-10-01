@@ -74,12 +74,14 @@ h4 {
   font-size: var(--base-size);
   font-weight: 400;
 }
-dl {
+ul {
+    margin: 0;
+    padding: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-dl dd {
+ul li {
   display: flex;
   justify-content: center;
   align-items: center;
