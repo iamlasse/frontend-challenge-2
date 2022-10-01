@@ -1,2 +1,136 @@
 @use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
+html {
+    // Primary
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream:  hsl(30, 38%, 92%);
+
+    // Secondary
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --very-dark-cyan: hsl(158, 37%, 19%, 1);
+    --dark-gray-blue:  hsl(228, 12%, 48%);
+    --color-white:  hsl(0, 0%, 100%);
+    --base-size: 0.875rem;
+
+    --font-family-1: 'Fraunces', serif;
+    --font-family-2: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--base-size);
+    max-width: 22rem;
+    margin-inline: auto;
+    
+    overflow: hidden;
+    @media screen and (min-width: 50rem) {
+        display: grid;
+        grid-template-columns: minmax(50%,1fr) 1fr;
+        min-width:clamp(16rem, -11.5rem + 88vw, 38rem);
+    }
+
+    & > picture {
+        grid-column: 1fr;
+        img {
+           height: 100%;
+           min-height: 100%;
+           width: 100%;
+           object-fit: cover;
+           min-width: 100%;
+       }
+    }
+
+    .card-content {
+        padding: calc(var(--base-size) *2 );
+        display: flex;
+        flex-flow: column nowrap;
+        gap: calc(var(--base-size) * 1.2);
+        @media screen and (min-width: 50rem) {
+            gap: calc(var(--base-size) * 2);
+        }   
+    }
+}
+
+h1 {
+    line-height: 1;
+    color: var(--very-dark-blue);
+    font-family: var(--font-family-1);
+}
+
+h4 {
+    font-family: var(--font-family-2);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dark-gray-blue);
+    font-size: var(--base-size);
+    font-weight: 400;
+}
+dl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+dl dd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & * {
+        font-style: normal;
+    }
+    &:first-of-type {
+        font-family: var(--font-family-1);
+        font-size: calc(var(--base-size) * 2);
+        color: var(--dark-cyan);
+    }
+    &:last-of-type {
+        font-family: var(--font-family-2);
+        font-size: var(--base-size);
+        color: var(--dark-gray-blue);
+        padding-inline: calc(var(--base-size) * 1.6);
+        text-decoration: line-through;
+    }
+}
+
+p {
+    color: var(--dark-gray-blue);
+font-family: var(--font-family-2);
+font-size: var(--base-size);
+line-height: 1.4;
+}
+
+button {
+    background-color: var(--dark-cyan);
+    border-radius: calc(var(--base-size) / 2);
+    border: 0px solid var(--dark-cyan);
+    color: var(--color-white);
+    font-family: var(--font-family-2);
+    font-size: var(--base-size);
+    padding-block: calc(var(--base-size) * 0.9);
+    padding-inline: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: var(--base-size);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    svg {
+        margin-top: 2px;
+    }
+
+    &:hover {
+        background-color: var(--very-dark-cyan);
+    }
+}
+
+.attribution {
+    display: none;
+}
