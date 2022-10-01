@@ -91,6 +91,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--font-family-2);
+  font-weight: 500;
 }
 
 .card {
@@ -164,6 +166,7 @@ ul li:first-of-type {
   font-family: var(--font-family-1);
   font-size: calc(var(--base-size) * 2.2);
   color: var(--dark-cyan);
+  font-weight: 700;
 }
 ul li:last-of-type {
   font-family: var(--font-family-2);
@@ -187,7 +190,7 @@ button {
   color: var(--color-white);
   font-family: var(--font-family-2);
   font-size: var(--base-size);
-  font-weight: 400;
+  font-weight: 500;
   padding-block: calc(var(--base-size) * 0.9);
   padding-inline: 2rem;
   position: relative;
